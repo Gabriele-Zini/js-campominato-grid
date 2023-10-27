@@ -68,6 +68,10 @@ button {
 background-color: rgb(110, 110, 249);
 }
 
+.d-hidden {
+    display: none;
+}
+
 /* HEADER */
 
 header {
@@ -80,6 +84,8 @@ align-items: center;
 main {
     background-color:hsl(159.84deg 100% 74.9%);
     padding: 5rem 0;
+    min-height: calc(100vh - 180px);
+    overflow-y: auto;
 }
 
 /* FOOTER */
