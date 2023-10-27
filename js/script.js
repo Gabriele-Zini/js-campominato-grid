@@ -12,7 +12,7 @@ const playBtn = document.getElementById("play-btn");
 
 // EVENTLISTENER
 
-// eventLisener del select
+// addEventLisener del select
 select.addEventListener("change", handleSelect);
 
 // addEventListener del play-btn
