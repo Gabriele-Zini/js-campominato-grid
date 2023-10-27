@@ -9,13 +9,15 @@
   <body>
     <!-- header -->
     <header class="d-flex justify-content-between">
-      <div class="logo"></div>
+      <div class="logo mx-3">
+        <img src="./img/logo.svg" alt="">
+      </div>
       <div>
         <select name="level" id="level">
-            <option value="">scegli un livello di gioco</option>
-            <option value="easy">facile</option>
-            <option value="normal">medio</option>
-            <option value="hard">difficile</option>
+          <option value="">scegli un livello di gioco</option>
+          <option value="easy">facile</option>
+          <option value="normal">medio</option>
+          <option value="hard">difficile</option>
         </select>
         <button class="mx-3" id="play-btn">play</button>
       </div>
@@ -24,15 +26,15 @@
 
     <!-- /main -->
     <main>
-      <div class="d-flex flex-wrap container d-hidden"></div>
+      <div id="overflow">
+        <div class="d-flex flex-wrap container d-hidden"></div>
+      </div>
     </main>
     <!-- /main -->
 
     <!-- footer -->
     <footer>
-        <div class="mx-3">
-            made it with &hearts; by <a href="">Boolean</a>
-        </div>
+      <div class="mx-3">made it with &hearts; by <a href="">Boolean</a></div>
     </footer>
     <!-- /footer -->
     <script src="./js/script.js"></script>

@@ -79,18 +79,27 @@ min-height: 80px;
 align-items: center;
 }
 
+.logo img {
+    width: 250px;
+}
+
 /* MAIN */
 
 main {
     background-color:hsl(159.84deg 100% 74.9%);
     padding: 5rem 0;
-    min-height: calc(100vh - 180px);
+    height: calc(100vh - 180px);
+    overflow-y: auto;
+}
+
+#overflow {
     overflow-y: auto;
 }
 
 /* FOOTER */
 footer {
     min-height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
 }
