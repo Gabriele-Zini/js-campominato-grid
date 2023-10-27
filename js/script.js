@@ -1,9 +1,23 @@
+// VARIABILI
+
+// container delle celle
 const container = document.querySelector(".container");
+
+// select btn
 const select = document.getElementById("level");
+
+// playbtn
 const playBtn = document.getElementById("play-btn");
 
+
+// EVENTLISTENER
+
+// eventLisener del select
 select.addEventListener("change", handleSelect);
+
+// addEventListener del play-btn
 playBtn.addEventListener("click", handlePlayBtn);
+
 
 // FUNZIONI
 
