@@ -9,6 +9,7 @@ const select = document.getElementById("level");
 // playbtn
 const playBtn = document.getElementById("play-btn");
 
+const title = document.querySelector(".title");
 
 // EVENTLISTENER
 
@@ -17,7 +18,6 @@ select.addEventListener("change", handleSelect);
 
 // addEventListener del play-btn
 playBtn.addEventListener("click", handlePlayBtn);
-
 
 // FUNZIONI
 
@@ -50,19 +50,33 @@ function handleClick() {
 function handleSelect() {
   let value = select.value;
   container.innerHTML = "";
-  if (value === "easy") {
-    createGrid(100);
+  title.innerHTML = `Hai scelto il livello ${value}, clicca play per iniziare a giocare`;
+  if (value === "default") {
+    title.innerHTML = "Scegli un livello di gioco";
     container.classList.add("d-hidden");
-  } else if (value === "normal") {
-    createGrid(81);
-    container.classList.add("d-hidden");
-  } else if (value === "hard") {
-    createGrid(49);
-    container.classList.add("d-hidden");
+    title.classList.remove("d-hidden");
+  } else {
+    if (value === "easy") {
+      createGrid(100);
+      container.classList.add("d-hidden");
+      title.classList.remove("d-hidden");
+    } else if (value === "normal") {
+      createGrid(81);
+      container.classList.add("d-hidden");
+      title.classList.remove("d-hidden");
+    } else if (value === "hard") {
+      createGrid(49);
+      container.classList.add("d-hidden");
+      title.classList.remove("d-hidden");
+    }
   }
 }
 
 // funzione per gestire il tasto play
 function handlePlayBtn() {
-  container.classList.remove("d-hidden");
+  let value = select.value;
+  if (value !== "default") {
+    title.classList.add("d-hidden");
+    container.classList.remove("d-hidden");
+  }
 }
